@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<title>Learn You Some Nashville Numbers</title>
+		<link href='http://fonts.googleapis.com/css?family=Chelsea+Market|Roboto' rel='stylesheet' type='text/css'>
+		<link type="text/css" href="nash.css" rel="stylesheet" />
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="handlebars.js"></script>
+	</head>
+	
+	<body>
+		
+		<h1><span class="smaller">Learn You Some<br></span>Nashville Numbers</h1>
+		
+		<div id="nash">
+			<div id="options">
+				<span>key: <select id="key"><option>random</option></select></span>
+				<span>
+					questions:
+					<select id="questionType">
+						<option value="numToChord">Number -> Chord</option>
+						<option value="chordToNum">Chord -> Number</option>
+					</select>
+				</span>
+				<span>
+					numbers:
+					<select id="numberType">
+						<option value="ROMAN">Roman Numeral</option>
+						<option value="ARABIC">Arabic</option>
+						<option value="ARABIC_PLUS_TYPE">Arabic + Type</option>
+					</select>
+				</span>
+			</div>
+			<div id="correct"><div class="text">&#xe000;</div></div>
+			<div id="incorrect"><div class="text">&#xe002;</div></div>
+			<div id="status">
+				<div>Current Streak<br><span id="currentStreak">0</span></div>
+				<div>Best Streak<br><span id="bestStreak">0</span></div>
+			</div>
+			<div id="questions"></div>
+			<div id="answers">
+				<div id="chords"></div>
+				<div id="numbers-arabic"></div>
+				<div id="numbers-arabic-plus-type"></div>
+				<div id="numbers-roman"></div>
+			</div>
+		</div>
+		
+		<!-- templates -->
+		<script id="question-template" type="text/x-handlebars-template">
+			<div class="question">
+				In the key of <em>{{key}}</em><br>
+				what is the <em>{{chord}}</em> chord?
+			</div>
+		</script>
+		<script id="number-answer-template" type="text/x-handlebars-template">
+			<div class="answer-square"><a href="#" class="answer" nash-number="{{number}}">{{chord}}</a></div>
+		</script>
+		<script id="chord-answer-template" type="text/x-handlebars-template">
+			<div class="answer-square">
+				{{note}}
+				{{#each types}}
+					<a href="#" class="answer" nash-note="{{../number}}" nash-type="{{@index}}">{{this}}</a>
+				{{/each}}
+			</div>
+		</script>
+		
+		<!--- main script -->
+		<script src="nash.js"></script>
+		
+	</body>
+	
+</html>

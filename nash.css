@@ -1,0 +1,148 @@
+/*
+Icon Set:	IcoMoon - Free -- http://keyamoon.com/icomoon/
+License:	CC BY 3.0 -- http://creativecommons.org/licenses/by/3.0/
+*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('icomoon/fonts/icomoon.eot');
+	src:url('icomoon/fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('icomoon/fonts/icomoon.woff') format('woff'),
+		url('icomoon/fonts/icomoon.ttf') format('truetype'),
+		url('icomoon/fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+html {
+	background:#bdc3c7;
+	font-size:16px;
+	height:100%;
+	width:100%;
+}
+h1 {
+	font-family: 'Chelsea Market', cursive;
+	font-size:2.5em;
+	line-height:0.89em;
+	text-align:center;
+}
+h1 .smaller {
+	font-size:0.75em;
+}
+#nash {
+	background:#ecf0f1;
+	border-radius:4px;
+	box-shadow:0 5px 20px rgba(0,0,0,0.5);
+	display:block;
+	font-family: 'Roboto', sans-serif;
+	margin:0 auto;
+	height:640px;
+	width:960px;
+}
+#options {
+	background:#ccc;
+	border-bottom:1px solid #aaa;
+	border-radius:4px 4px 0 0;
+	color:#444;
+	font-size:0.8em;
+	height:30px;
+	position:relative;
+	text-align:center;
+}
+#options span {
+	display:inline-block;
+	padding:3px 10px;
+}
+#status {
+	color:#777;
+	font-size:.8em;
+	padding:0 0 0 5px;
+	position:absolute;
+}
+#status span {
+	font-weight:bold;
+}
+#correct, #incorrect {
+	display:table;
+	font-family:'icomoon';
+	font-size:256px;
+	height:370px;
+	opacity:0.7;
+	position:absolute;
+	text-align:center;
+	vertical-align:middle;
+	width:960px;
+}
+#correct {
+	background-color:#cfc;
+	color:#6c6;
+}
+#incorrect {
+	background-color:#fcc;
+	color:#c66;
+}
+#correct .text, #incorrect .text {
+	display:table-cell;
+	vertical-align:middle;
+}
+#questions {
+	display:table;
+	height:370px;
+	position:relative;
+	text-align:center;
+	width:100%;
+}
+#questions .question {
+	display:table-cell;
+	height:200px;
+	line-height:4em;
+	vertical-align:middle;
+}
+#questions .question em {
+	font-size:2em;
+	font-style:normal;
+	line-height:0.5em;
+	padding:0 20px;
+}
+#answers {
+	background:#2c3e50;
+	border-radius:0 0 4px 4px;
+	display:table;
+	height:240px;
+	width:100%;
+}
+#chords, #numbers-arabic, #numbers-roman, #numbers-arabic-plus-type {
+	display:table-cell;
+	font-size:1.1em;
+	margin:auto;
+	padding:3px 2px 3px;
+	text-align:center;
+	vertical-align:middle;
+}
+.answer-square {
+	background-color:#2c3e50;
+	color:#ecf0f1;
+	display:inline-block;
+	margin:0 1px;
+	padding:2px 0 0;
+	text-align:center;
+	width:70px;
+}
+.answer-square:hover {
+	background-color:hsl(210, 29%, 31%);
+}
+.answer {
+	background:hsl(210, 29%, 40%);
+	color:inherit;
+	display:block;
+	margin:2px 0 0;
+	padding:14px 2px;
+	text-decoration:none;
+	text-shadow:1px 1px 2px #2c3e50;
+}
+.answer:hover {
+	background:hsl(210, 29%, 50%);
+	text-shadow:1px 1px 2px #34495e, 1px 1px 3px #34495e, 1px 1px 4px #2c3e50;
+}
+.answer.incorrect {
+	cursor:default;
+	opacity:0.35;
+}
